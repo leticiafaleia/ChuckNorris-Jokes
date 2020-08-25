@@ -10,8 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var serviceAPI = ServiceAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        serviceAPI.fetchJokes()
         // Do any additional setup after loading the view.
     }
 

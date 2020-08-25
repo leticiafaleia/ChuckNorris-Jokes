@@ -1,0 +1,6 @@
+framework module Pods_Fatos_CNTests {
+  umbrella header "Pods-Fatos CNTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
