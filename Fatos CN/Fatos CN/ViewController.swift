@@ -12,12 +12,11 @@ class ViewController: UIViewController {
 
     var serviceAPI = ServiceAPI()
     
+    @IBOutlet weak var jokeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         serviceAPI.fetchJokes()
-        // Do any additional setup after loading the view.
     }
-
-
 }
 

@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct ChuckNorris: Decodable {
+struct Facts: Decodable {
     var icon: String
-    var id: Int
-    var facts: String
+    var text: String
+    
+    enum CodingKeys: String, CodingKey {
+        case icon = "icon_url"
+        case text = "value"
+    }
 }
