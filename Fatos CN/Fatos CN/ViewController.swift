@@ -22,10 +22,28 @@ struct Facts: Decodable {
 class ViewController: UIViewController {
     
     @IBOutlet weak var jokeLabel: UILabel!
+    @IBAction func nextBtn(_ sender: Any) {
+        fetchJokes()
+    }
+    @IBAction func shareJoke(_ sender: Any) {
+        let shareBtn = UIActivityViewController(activityItems: [jokeLabel.text], applicationActivities: nil)
+        
+        shareBtn.completionWithItemsHandler = { (nil, completed, _, error) in
+            if completed {
+                print("Completed!")
+            } else {
+                print("Canceled!")
+            }
+        }
+        
+        present(shareBtn, animated: true){
+            print("Presented!")
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchJokes()
     }
         
