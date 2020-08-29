@@ -113,11 +113,19 @@
 			path = "Fatos CNTests";
 			sourceTree = "<group>";
 		};
-		A887BDBC24F45B7500BFCFBA /* Model */ = {
+		A870672F24FAD5B6008D072B /* NetWorking */ = {
 			isa = PBXGroup;
 			children = (
 				A80E16C824F44DD400BFA2FD /* Service.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		A887BDBC24F45B7500BFCFBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				A887BDBF24F45BED00BFCFBA /* Facts.swift */,
+				A870672F24FAD5B6008D072B /* NetWorking */,
 			);
 			path = Model;
 			sourceTree = "<group>";
