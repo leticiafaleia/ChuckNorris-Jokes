@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var jokeLabel: UILabel!
-    
-    public var favoriteJokes = [String]()
+
+    var favoriteJokes = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +53,4 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    func favoriteJoke(){
-        
-    }
 }
-
-
