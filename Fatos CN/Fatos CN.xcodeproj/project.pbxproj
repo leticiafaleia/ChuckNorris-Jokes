@@ -16,7 +16,9 @@
 		A80E16B324F44CCB00BFA2FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80E16B124F44CCB00BFA2FD /* LaunchScreen.storyboard */; };
 		A80E16BE24F44CCB00BFA2FD /* Fatos_CNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80E16BD24F44CCB00BFA2FD /* Fatos_CNTests.swift */; };
 		A80E16C924F44DD400BFA2FD /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80E16C824F44DD400BFA2FD /* ServiceAPI.swift */; };
+		A81A68BE2502CDFD00452D5A /* Jokes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A81A68BC2502CDFD00452D5A /* Jokes.xcdatamodeld */; };
 		A887BDC024F45BED00BFCFBA /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BDBF24F45BED00BFCFBA /* Facts.swift */; };
+		A8D35DE524FD83F8003246B4 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D35DE424FD83F8003246B4 /* FavoritesTableViewController.swift */; };
 		CB5F55AD2C0C4245C9B59A69 /* Pods_Fatos_CNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF77D607BE5DE02DABB7A8A /* Pods_Fatos_CNTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,8 +48,10 @@
 		A80E16BD24F44CCB00BFA2FD /* Fatos_CNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fatos_CNTests.swift; sourceTree = "<group>"; };
 		A80E16BF24F44CCB00BFA2FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A80E16C824F44DD400BFA2FD /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		A81A68BD2502CDFD00452D5A /* Jokes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jokes.xcdatamodel; sourceTree = "<group>"; };
 		A87E1B2979AB13861B7965EB /* Pods_Fatos_CN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fatos_CN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A887BDBF24F45BED00BFCFBA /* Facts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facts.swift; sourceTree = "<group>"; };
+		A8D35DE424FD83F8003246B4 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		DBF77D607BE5DE02DABB7A8A /* Pods_Fatos_CNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fatos_CNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5977633A92770CD0EB73377 /* Pods-Fatos CNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fatos CNTests.release.xcconfig"; path = "Target Support Files/Pods-Fatos CNTests/Pods-Fatos CNTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +129,7 @@
 			children = (
 				A887BDBF24F45BED00BFCFBA /* Facts.swift */,
 				A870672F24FAD5B6008D072B /* NetWorking */,
+				A81A68BC2502CDFD00452D5A /* Jokes.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				A80E16AA24F44CC400BFA2FD /* ViewController.swift */,
+				A8D35DE424FD83F8003246B4 /* FavoritesTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,6 +346,8 @@
 				A80E16AB24F44CC400BFA2FD /* ViewController.swift in Sources */,
 				A887BDC024F45BED00BFCFBA /* Facts.swift in Sources */,
 				A80E16C924F44DD400BFA2FD /* ServiceAPI.swift in Sources */,
+				A8D35DE524FD83F8003246B4 /* FavoritesTableViewController.swift in Sources */,
+				A81A68BE2502CDFD00452D5A /* Jokes.xcdatamodeld in Sources */,
 				A80E16A724F44CC400BFA2FD /* AppDelegate.swift in Sources */,
 				A80E16A924F44CC400BFA2FD /* SceneDelegate.swift in Sources */,
 			);
@@ -612,6 +620,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A81A68BC2502CDFD00452D5A /* Jokes.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A81A68BD2502CDFD00452D5A /* Jokes.xcdatamodel */,
+			);
+			currentVersion = A81A68BD2502CDFD00452D5A /* Jokes.xcdatamodel */;
+			path = Jokes.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A80E169B24F44CC300BFA2FD /* Project object */;
 }
