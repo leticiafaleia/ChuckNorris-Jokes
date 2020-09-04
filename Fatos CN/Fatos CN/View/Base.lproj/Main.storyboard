@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Piadas-->
+        <!--Jokes-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fatos_CN" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Frase" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtb-Sp-P54">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quote" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtb-Sp-P54">
                                 <rect key="frame" x="20" y="296" width="374" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
@@ -23,28 +23,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw2-zT-Nbu">
-                                <rect key="frame" x="78" y="547" width="57" height="29"/>
+                                <rect key="frame" x="91" y="547" width="32" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Favoritar"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="favoriteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OqY-u2-Yve"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-e4-wHF">
-                                <rect key="frame" x="294" y="547" width="53" height="29"/>
+                                <rect key="frame" x="306" y="547" width="30" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Próximo"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="nextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jsn-5C-dYR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq3-gG-n3U">
-                                <rect key="frame" x="169" y="547" width="85" height="29"/>
+                                <rect key="frame" x="193" y="547" width="38" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Compartilhar"/>
+                                <state key="normal" title="Share"/>
                                 <connections>
                                     <action selector="shareJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOf-XI-6UF"/>
                                 </connections>
@@ -53,12 +53,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Piadas" id="ppM-b7-rW7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="bXf-na-iZd">
-                            <connections>
-                                <segue destination="Hbf-a2-1yG" kind="show" id="Phk-Cd-TnL"/>
-                            </connections>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Jokes" id="ppM-b7-rW7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="bXf-na-iZd"/>
                     </navigationItem>
                     <connections>
                         <outlet property="jokeLabel" destination="Gtb-Sp-P54" id="Lwl-u0-K7U"/>
@@ -66,36 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="120"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="3fD-PL-PuX">
-            <objects>
-                <tableViewController id="Hbf-a2-1yG" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bXD-0J-ypE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JLv-7m-Aie">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JLv-7m-Aie" id="6YA-2B-s1X">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Hbf-a2-1yG" id="VLA-UF-dO9"/>
-                            <outlet property="delegate" destination="Hbf-a2-1yG" id="0Zd-SO-8tf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Lpr-bZ-cZt"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aIV-Xv-9qa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1855" y="120"/>
+            <point key="canvasLocation" x="1000.0000000000001" y="119.86607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="n3x-gE-3sF">

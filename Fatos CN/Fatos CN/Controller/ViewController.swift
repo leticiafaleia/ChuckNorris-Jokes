@@ -16,17 +16,24 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        jokeLabel.text = "Carregando piada..."
+        jokeLabel.text = "loading joke..."
         loadJokes()
     }
     
-    @IBAction func favoriteBtn(_ sender: Any) {
-        favoriteJokes.append(jokeLabel.text ?? "")
-        print("Favoritado")
+    @IBAction func favoriteBtn(_ sender: UIButton) {
+        var joke: Joke!
+        joke = Joke.init(context: context)
+        joke.quote = jokeLabel.text
+        do {
+            try context.save()
+            print("save into favs list")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func nextBtn(_ sender: Any) {
-        print("Próxima piada")
+        print("next joke")
         loadJokes()
     }
     
@@ -35,14 +42,14 @@ class ViewController: UIViewController {
         
         shareBtn.completionWithItemsHandler = { (nil, completed, _, error) in
             if completed {
-                print("Completo")
+                print("completed")
             } else {
-                print("Cancelado")
+                print("canceled")
             }
         }
         
         present(shareBtn, animated: true){
-            print("Apresentado")
+            print("presented")
         }
     }
     
