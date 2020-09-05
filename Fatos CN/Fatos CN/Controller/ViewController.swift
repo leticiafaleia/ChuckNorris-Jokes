@@ -85,10 +85,7 @@ class ViewController: UIViewController {
     }
     
     func save(quote: String){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-           return
-         }
-        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Joke", in: managedContext)!
         let joke = NSManagedObject(entity: entity, insertInto: managedContext)
@@ -101,11 +98,16 @@ class ViewController: UIViewController {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+// MARK - Delete joke from Core Data
+    func delete(quote: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
+    
+    }
 }
 
 
 // MARK - TableView
-
 extension ViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favoritesJokes.count
