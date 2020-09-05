@@ -28,7 +28,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="favoriteBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OqY-u2-Yve"/>
+                                    <action selector="saveJoke:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8d-cg-2ZA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-e4-wHF">
@@ -54,7 +54,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Jokes" id="ppM-b7-rW7">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="bXf-na-iZd"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="FlI-6f-yZi">
+                            <connections>
+                                <segue destination="owf-xa-2fy" kind="show" id="okm-lM-a2m"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="jokeLabel" destination="Gtb-Sp-P54" id="Lwl-u0-K7U"/>
@@ -64,13 +68,48 @@
             </objects>
             <point key="canvasLocation" x="1000.0000000000001" y="119.86607142857142"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fHH-a0-mz6">
+            <objects>
+                <viewController id="owf-xa-2fy" customClass="ViewController" customModule="Fatos_CN" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MLA-Jy-cAJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6z0-jg-8Mc">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="owf-xa-2fy" id="BSi-wg-fJB"/>
+                                    <outlet property="delegate" destination="owf-xa-2fy" id="mTG-fp-lne"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6z0-jg-8Mc" firstAttribute="top" secondItem="dMs-rS-lQO" secondAttribute="top" id="1wW-I7-XWP"/>
+                            <constraint firstItem="6z0-jg-8Mc" firstAttribute="leading" secondItem="dMs-rS-lQO" secondAttribute="leading" id="UJE-3u-Nf2"/>
+                            <constraint firstItem="dMs-rS-lQO" firstAttribute="trailing" secondItem="6z0-jg-8Mc" secondAttribute="trailing" id="WMy-Xt-dIa"/>
+                            <constraint firstItem="dMs-rS-lQO" firstAttribute="bottom" secondItem="6z0-jg-8Mc" secondAttribute="bottom" id="xWU-ac-lnf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dMs-rS-lQO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9Qf-Ve-Z67"/>
+                    <connections>
+                        <outlet property="tableView" destination="6z0-jg-8Mc" id="rBQ-rc-neW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pff-W9-UQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="123"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="n3x-gE-3sF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qrr-j6-oAC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FfX-yT-yIO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="FfX-yT-yIO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
