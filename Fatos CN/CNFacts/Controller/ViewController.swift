@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     }
     
 // MARK - Fetch Data from Core Data
-    
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
 
@@ -93,22 +92,52 @@ class ViewController: UIViewController {
         
         do {
           try managedContext.save()
-            favoritesJokes.append(joke)
+            if !favoritesJokes.contains(joke){
+                favoritesJokes.append(joke)
+                print("saved")
+            } else {
+                print("equal jokes")
+            }
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-    }
-// MARK - Delete joke from Core Data
-    func delete(quote: String){
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
-    
     }
 }
 
 
 // MARK - TableView
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let managedContext = appDelegate.persistentContainer.viewContext
+            managedContext.delete(favoritesJokes[indexPath.row])
+            
+            do{
+                try managedContext.save()
+                favoritesJokes.removeAll()
+                viewWillAppear(true)
+                tableView.reloadData()
+                print("deleted")
+            }catch{
+              print("not deleted")
+            }
+        }
+    }
+    
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let alert = UIAlertController(title: "", message: "\(favoritesJokes[indexPath.row].value(forKey: "quote") ?? "")", preferredStyle: .alert)
+
+    let cancelAction = UIAlertAction(title: "Cancel",style: .cancel)
+    alert.addAction(cancelAction)
+    present(alert, animated: true)
+  }
+    
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favoritesJokes.count
   }
