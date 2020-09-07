@@ -8,4 +8,4 @@ Foram utilizados:
 - CoreData
 
 - Antes de abrir o app na máquina:
-1 - pod install
+ 1 - pod install
