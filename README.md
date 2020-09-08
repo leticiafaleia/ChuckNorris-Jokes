@@ -1,4 +1,4 @@
-# Fatos-de-ChuckNorris
+# Fatos de Chuck Norris
 Esse projeto foi desenvolvido com o intuito de colocar as tecnologias e frameworks aprendidos em prática.
 
 Arquiteutura utilizada [MVC](https://www.devmedia.com.br/introducao-ao-padrao-mvc/29308)
