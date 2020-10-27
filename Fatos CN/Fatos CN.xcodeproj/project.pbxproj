@@ -20,6 +20,7 @@
 		A866D2FE250591AF00E988F1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A80E16B424F44CCB00BFA2FD /* Info.plist */; };
 		A866D2FF250591AF00E988F1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A80E16B424F44CCB00BFA2FD /* Info.plist */; };
 		A887BDC024F45BED00BFCFBA /* Facts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A887BDBF24F45BED00BFCFBA /* Facts.swift */; };
+		AED869A12548488E0072FF44 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A80E16BF24F44CCB00BFA2FD /* Info.plist */; };
 		CB5F55AD2C0C4245C9B59A69 /* Pods_Fatos_CNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF77D607BE5DE02DABB7A8A /* Pods_Fatos_CNTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -261,6 +262,7 @@
 				A866D2FE250591AF00E988F1 /* Info.plist in Resources */,
 				A80E16B324F44CCB00BFA2FD /* LaunchScreen.storyboard in Resources */,
 				A80E16B024F44CCB00BFA2FD /* Assets.xcassets in Resources */,
+				AED869A12548488E0072FF44 /* Info.plist in Resources */,
 				A80E16AE24F44CC400BFA2FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

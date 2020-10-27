@@ -39,9 +39,8 @@ class ViewController: UIViewController {
       } catch let error as NSError {
         print("Could not fetch. \(error), \(error.userInfo)")
       }
-    }
+}
 
-    
 // MARK - Fetch Jokes from the API
     func loadJokes(){
         ServiceAPI.fetchJokes { (info) in
@@ -50,12 +49,12 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 // MARK - Next Joke Button
     @IBAction func nextBtn(_ sender: Any) {
         print("next joke")
         loadJokes()
     }
-    
     
 // MARK - Share Joke button
     @IBAction func shareJoke(_ sender: Any) {
@@ -71,7 +70,7 @@ class ViewController: UIViewController {
         present(shareBtn, animated: true){
             print("presented")
         }
-    }
+}
     
 // MARK - Save Joke
     @IBAction func saveJoke(_ sender: UIButton) {
@@ -123,9 +122,9 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
                 favoritesJokes.removeAll()
                 viewWillAppear(true)
                 tableView.reloadData()
-                print("deleted")
+                print("deleted!")
             }catch{
-              print("not deleted")
+              print("not deleted!")
             }
         }
     }
