@@ -10,17 +10,6 @@ Bibliotecas internas:
 Bibliotecas Externas:
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 
-
-## Funcionamento
-Na primeira tela do app é exibida uma piada da API [Chuck Norris Jokes Api](https://api.chucknorris.io/), onde possuem quatro botões:
-- Salvar, compartilhar, exibir a próxima piada e a lista de piadas. Onde será exibido as piadas que foram salvas.
-- Na lista de piadas, é possível visualiza-lá e também exclui-lá.
-
-
-## Piadas
-<img src="1.png" alt="jokesHome" width="200"/>   <img src="2.png" alt="jokesHome" width="200"/>   <img src="3.png" alt="jokesHome" width="200"/>   <img src="4.png" alt="jokesHome" width="200"/>
-
-
 ## Build do app em sua máquina
 Antes de abrir o app na máquina, é necessário:
 
@@ -31,3 +20,13 @@ Você pode acompanhar o passo a passo pra instalar aqui [CocoaPods](https://coco
 
 Depois de instalar, abra a pasta do projeto e digite o comando:
 - pod install
+
+## Funcionamento
+Na primeira tela do app é exibida uma piada da API [Chuck Norris Jokes Api](https://api.chucknorris.io/), onde possuem quatro botões:
+- Salvar, compartilhar, exibir a próxima piada e a lista de piadas. Onde será exibido as piadas que foram salvas.
+- Na lista de piadas, é possível visualiza-lá e também exclui-lá.
+
+<img src="1.png" alt="jokesHome" width="200"/>   <img src="2.png" alt="jokesHome" width="200"/>   <img src="3.png" alt="jokesHome" width="200"/>   <img src="4.png" alt="jokesHome" width="200"/>
+
+## Observação
+App desenvolvido por @leticiafaleia
