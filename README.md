@@ -1,4 +1,4 @@
-# Piadas de Chuck Norris
+# Chuck Norris Jokes
 Esse projeto foi desenvolvido com o intuito de colocar as tecnologias e frameworks aprendidos em prática.
 
 Arquiteutura utilizada [MVC](https://www.devmedia.com.br/introducao-ao-padrao-mvc/29308)
