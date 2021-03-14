@@ -1,32 +1,32 @@
 # Chuck Norris Jokes
-Esse projeto foi desenvolvido com o intuito de colocar as tecnologias e frameworks aprendidos em prática.
+This project was developed in order to put the technologies and frameworks learned into practice.
 
-Arquiteutura utilizada [MVC](https://www.devmedia.com.br/introducao-ao-padrao-mvc/29308)
+I used the Design Pattern [MVC](https://www.devmedia.com.br/introducao-ao-padrao-mvc/29308)
 
-Bibliotecas internas:
+Internal libraries:
 - [Codable](https://developer.apple.com/documentation/foundation/archives_and_serialization/encoding_and_decoding_custom_types)
 - [CoreData](https://developer.apple.com/documentation/coredata)
 
-Bibliotecas Externas:
+External libaries:
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 
-## Build do app em sua máquina
-Antes de abrir o app na máquina, é necessário:
+## Build the app on your machine
+Before opening the app on the machine, it is necessary to:
 
-Xcode 11.5 ou superior. 
-Ter o cocoapods instalado.
+Xcode 11.5 or higher.
+Have cocoapods installed.
 
-Você pode acompanhar o passo a passo pra instalar aqui [CocoaPods](https://cocoapods.org/)
+You can follow the step by step to install here [CocoaPods](https://cocoapods.org/)
 
-Depois de instalar, abra a pasta do projeto e digite o comando:
+After installing, open the project folder and enter the command:
 - pod install
 
-## Funcionamento
-Na primeira tela do app é exibida uma piada da API [Chuck Norris Jokes Api](https://api.chucknorris.io/), onde possuem quatro botões:
-- Salvar, compartilhar, exibir a próxima piada e a lista de piadas. Onde será exibido as piadas que foram salvas.
-- Na lista de piadas, é possível visualiza-lá e também exclui-lá.
+## Operation
+On the first screen of the app, an API joke is displayed [Chuck Norris Jokes Api] (https://api.chucknorris.io/), where they have four buttons:
+- Save, share, view the next joke and the list of jokes. Where the saved jokes will be displayed.
+- In the list of jokes, it is possible to view it and also delete it.
 
 <img src="1.png" alt="jokesHome" width="200"/>   <img src="2.png" alt="jokesHome" width="200"/>   <img src="3.png" alt="jokesHome" width="200"/>   <img src="4.png" alt="jokesHome" width="200"/>
 
-## Observação
-App desenvolvido por @leticiafaleia
+## Observation
+App developed by @leticiafaleia
